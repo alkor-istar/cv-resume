@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# Except all directories (crucial for performance and path traversal)
+!*/
+
+# Except files with the specific extensions  
+!*.tex
+!*.cls
+!*.sty
+!*.md
+!.gitignore 

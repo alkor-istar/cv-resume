@@ -1,0 +1,80 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.85]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Francisco Gabriel} % Your first name
+\familyname{Rodr\'{i}guez} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Senior Software Engineer}
+\address{Buenos Aires, Argentina}{}%{Mart\'{i}n Coronado, Buenos Aires}
+\mobile{ +54 9 11 2409 6081}
+%\phone{(011) 4842-6857}
+%\fax{(000) 111 1113}
+\email{fgabriel.inbox@gmail.com}
+%\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+\photo[80pt][0.4pt]{pictures/cv-compress-cropped} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+ \clearpage
+
+\recipient{HR Departmnet}{Asana} % Letter recipient
+\date{\today} % Letter date
+\opening{Dear  Hiring Manager,} % Opening greeting
+\closing{Warm Regards,} % Closing phrase
+
+\makelettertitle % Print letter title
+I am writing to express my keen interest in the Software Engineer for Developers Tools position at Asana. I am enthusiastic about the opportunity to contribute to your team's mission of assisting other developers in enhancing efficiency and productivity.
+\newline\newline
+I am applying to this role as fully remote, as I have experience working in this manner within fast-paced environments, utilizing Agile/Scrum methodologies. Although I understand that the position is intended to be hybrid, I wanted to submit my resume regardless, in case there might be a change in your approach.
+\newline\newline
+In my current role as a Full-stack Software Engineer at Responsis, I played a pivotal role in completely rewriting the codebase of Cascade, a strategy execution platform used by over 25,000 teams worldwide. This involved transitioning from a monolithic infrastructure to a distributed cloud architecture hosted on AWS. We utilized various AWS services such as Lambda, DynamoDB, RDS, SNS, SQS, and S3. Additionally, I have extensive experience with CI/CD pipelines, including CircleCI, and cloud resource configuration with Terraform.
+\newline\newline
+In conclusion, I am excited about the prospect of joining Asana and leveraging my skills and expertise to drive meaningful impact within the organization.
+\newline\newline
+Thank you for considering my application. I eagerly anticipate the possibility of discussing how my background, skills, and enthusiasm can contribute to the success of your team.
+\newline\newline
+%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+\makeletterclosing % Print letter signature
+
+\end{document}

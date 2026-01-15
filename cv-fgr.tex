@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%!TEX root = ./cv-fgr.tex
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[16pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classicfr} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.85]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Gabriel} 
+\familyname{Rodr\'{i}guez} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Senior Software Engineer}
+\address{Buenos Aires, Argentina}{}%{Mart\'{i}n Coronado, Buenos Aires}
+\homepage{www.linkedin.com/in/gabriel-rodriguez-b47b0920b/}{Linkedin Profile}
+%\phone{(011) 4842-6857}
+%\fax{(000) 111 1113}
+\email{fgabriel.inbox@gmail.com}
+%\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+ 
+\makecvtitle % Print the CV title
+\section{About me}
+\vspace{0.8em} 
+I'm a Senior Software Engineer with over 10 years of experience designing and building scalable web applications, data pipelines, and distributed systems. I specialize in TypeScript, Node.js, Python, and cloud-native architectures, with a strong focus on backend development, performance optimization, and API design.
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+%\newpage
+\section{Skills}
+
+\cvitem{Programming}{TypeScript, NodeJS, Python, C/C++, PHP, Bash, ReactJS, HTML/CSS, SQL, Postgres, MySql}
+\cvitem{Cloud \& Infra}{AWS (Lambda, DynamoDB, RDS, SNS), Terraform, Docker, Kubernetes, Apache Kafka, Flink, Debezium, Git, CircleCI, QEMU/KVM, CCNA, Github Actions}
+\cvitem{Languages}{Spanish (Native), English (ESOL Examinations - First Certificate B2)}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\section{Experience}
+\subsection{Software engineering}
+\cventry{Apr 2024 -- Present}{OpenGov}{\textsc{Senior Software Engineer}}{}{}
+{
+\begin{itemize}
+\item {Developed software for OpenGov's Procurement suite, a government technology company providing cloud solutions for the U.S. public sector}
+\item {Implemented a permission system that enables confidentiality features}
+\item {Optimized Flink data pipeline using PyFlink and Flink SQL to enhance the suite’s reporting functionality}
+\item {Maintained and improved a microservice infrastructure leveraging Kubernetes and Apache Kafka}
+\item {Developed a public API subsystem with cache to efficiently serve reporting data} 
+\item {Focused on performance optimization and maintenance of the Flink data pipeline}
+\item {Enhanced frontend accessibility compliance using tools like Axe and Wave}
+\end{itemize}
+}
+\cventry{Nov 2021 -- Mar 2024}{Responsis - Cascade}{\textsc{Full-stack Software Engineer}}{}{}
+{
+\begin{itemize}
+\item {Contributed to rewriting Cascade from PHP to Node.js and migrating to a distributed AWS cloud architecture using Lambda, DynamoDB, and API Gateway.}
+\item {Designed the new code for the integrations feature that allowed an interface with Google, Microsoft, Atlassian and Salesforce APIs for data ingestion}
+\item {Developed a public api with AWS ApiGateway to facilitate webhooks and connections from third parties like Zapier and Power Automate. This includes the certification of connectors for seamless interoperability} 
+\item {All infrastructure was deployed using Terraform and CircleCI}
+\item {Enhanced frontend performance by optimizing GraphQL queries and implementing Apollo subscriptions, resulting in a tenfold improvement in platform speed and responsiveness}
+\item {Played a key role in designing and optimizing frontend features utilizing ReactJS}
+\item {Interviewed and trained new team members\newline}
+\end{itemize}
+}
+\cventry{2017 -- Nov 2021}{Belaris}{\textsc{Software Engineer, DevOps}}{}{}
+{
+\begin{itemize}
+\item {Designed and developed web applications utilizing PHP Laravel framework}
+\item {Led the deployment of applications on Linux environments using Docker}
+\end{itemize}
+}
+\cventry{2020}{Freelance}{\textsc{Software Engineer}}{}{}
+{
+\begin{itemize}
+\item {Developed Telegram bot with Python backend for automatic longing and shorting cryptocurrencies based on indicators and a simple machine learning model.}
+\end{itemize}
+}
+
+\subsection{Electronic Engineering}
+
+\cventry{March 2011 -- Nov 2021} {\textsc{National Atomic Energy Commission (CNEA)}}{\textsc{Instrumentation and Control Engineer}}{}{}{
+\begin{itemize}
+\item {Design, manufacture and programming (VHDL) of modules for reactor protection systems of CAREM 25 and RA10 nuclear reactors}
+\item {Programming in C of votation and registration module for the Auxiliary Boron Injection System for Atucha II Nuclear Plant}
+\newline{}
+\end{itemize}
+}
+
+%------------------------------------------------
+
+
+
+
+\cventry{2009--2011}{\textsc{Institute for Scientific and Technical Research for Military Defense (CITEDEF)}}{PIDEF Scholarship}{}{}
+{
+\begin{itemize}
+\item {Computer controlled laser micromachining using solid state infrared laser}
+\item {Deployment and maintenance of servers based on Linux}
+\end{itemize}
+}
+
+%\cventry{2009--2010}{Parque Electr\'{o}nica}{\textsc{Electronic Technician}}{}{}{
+%\begin{itemize}
+%\item{Electromedicine devices repair}
+%\end{itemize}
+%}
+
+
+%------------------------------------------------
+
+\subsection{Teaching}
+
+\cventry{2007--2022}{C/C++ programming professor}{\textsc{National Technological University}}{}{}{}
+
+
+\cventry{2012--2013}{CCNA Instructor}{\textsc{National Technological University}}{\newline Haedo Regional Faculty }{}{}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{2005--2010}{Electronic Engineering}{National Technological University (UTN)}{Haedo Regional Faculty}{}{}  % Arguments not required can be left empty
+\cventry{1998--2004}{Electronic Technician}{Leonardo Murialdo Institute}{Villa Bosch}{}{}
+
+\end{document}
