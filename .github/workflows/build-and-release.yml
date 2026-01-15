@@ -1,0 +1,36 @@
+name: Build LaTeX CV and Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv-fgr.tex
+          latexmk_use_lualatex: true
+
+      - name: Rename output PDF
+        run: |
+          mv cv-fgr.pdf Gabriel_Rodriguez_CV.pdf
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest CV
+          files: Gabriel_Rodriguez_CV.pdf
+          body: |
+            Automatically generated CV from the latest commit.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

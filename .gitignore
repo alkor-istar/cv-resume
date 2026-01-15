@@ -9,4 +9,5 @@
 !*.cls
 !*.sty
 !*.md
+!*.yml
 !.gitignore 
