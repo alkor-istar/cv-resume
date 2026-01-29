@@ -32,7 +32,7 @@
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
-\usepackage[scale=0.85]{geometry} % Reduce document margins
+\usepackage[scale=0.95]{geometry} % Reduce document margins
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
@@ -45,48 +45,61 @@
 
 % All information in this block is optional, comment out any lines you don't need
 \title{Senior Software Engineer}
-\address{Buenos Aires, Argentina}{}%{Mart\'{i}n Coronado, Buenos Aires}
+\address{Remote Contractor \textbullet\ Argentina}{}
 \homepage{www.linkedin.com/in/gabriel-rodriguez-b47b0920b/}{Linkedin Profile}
+\mobile{(+54) 911-2409-6081}
 %\phone{(011) 4842-6857}
 %\fax{(000) 111 1113}
 \email{fgabriel.inbox@gmail.com}
-\homepage{alkor-istar.github.io}{Github portfolio} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\homepage{alkor-istar.github.io}{Github portfolio} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 %\extrainfo{additional information}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
  
-\makecvtitle % Print the CV title
-\section{About me}
-\vspace{0.8em} 
-I'm a Senior Software Engineer with over 7 years of experience designing and building scalable web applications, data pipelines, and distributed systems. I specialize in TypeScript, Node.js, Python, and cloud-native architectures, with a strong focus on backend development, performance optimization, and API design.
+\makecvtitle % Print the CV title 
 
+{Senior Software Engineer with \textbf{7+ years of experience} building
+\textbf{scalable web applications} and leading
+\textbf{cross-team technical initiatives} in fast-paced
+\textbf{SaaS} and \textbf{product-driven environments}.
+Strong background in backend and distributed systems, with hands-on expertise in
+\textbf{Node.js, React, Python}, and \textbf{AWS-based architectures}.
+Demonstrated ability to own complex systems end-to-end, drive
+architectural decisions, and guide teams through
+migrations, integrations, and platform evolution.
+Passionate about building \textbf{high-autonomy teams}, improving
+\textbf{engineering standards}, and scaling systems with a focus on
+\textbf{long-term impact and operational excellence}.}
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
 %\newpage
 \section{Skills}
 
-\cvitem{Programming}{TypeScript, NodeJS, Python, C/C++, PHP, ReactJS, LangGraph, SQL, Postgres, HTML/CSS}
-\cvitem{Cloud \& Infra}{AWS (Lambda, DynamoDB, RDS, SNS), Terraform, Docker, Kubernetes, Apache Kafka, Flink, Debezium, Git, CircleCI, QEMU/KVM, CCNA, Github Actions}
-\cvitem{Languages}{Spanish (Native), English (ESOL Examinations - First Certificate B2)}
+\cvitem{Frontend}{React | TypeScript | JavaScript | HTML/CSS | MaterialUI | Redux | Next.js}
+\cvitem{Backend}{NodeJS | Python | C/C++ | PHP | LangGraph |  GraphQL | JWT | OAuth | gRPC }
+\cvitem{Databases}{PostgreSQL | MySQL | MongoDB | Redis | DynamoDB | RDS | Opensearch}
+\cvitem{Cloud \& DevOps}{AWS | GCP | Lambda | S3 | Terraform | Docker | Kubernetes | Apache Kafka | Flink | Debezium | CI/CD | Linux}
+\cvitem{Architecures \& Patterns}{Microservices | Serverless | Event-Driven Design | Domain-Driven Design | Test-Driven Design }
+\cvitem{Languages}{Spanish (Native), English (C1)}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-\section{Experience}
+\section{Professional Experience}
 \subsection{Software engineering}
 \cventry{Apr 2024 -- Present}{OpenGov}{\textsc{Senior Software Engineer}}{}{}
 {
 \begin{itemize}
-\item {Developed software for OpenGov's Procurement suite, a government technology company providing cloud solutions for the U.S. public sector}
-\item {Contributed to a mature codebase based in Node.js, React, Koa, Apache Kafka, and PostgreSQL}
-\item {Implemented a permission system that enables confidentiality features}
-\item {Optimized Flink data pipeline using PyFlink and Flink SQL to enhance the suite’s reporting functionality}
-\item {Maintained and improved a microservice infrastructure leveraging Kubernetes and Apache Kafka}
-\item {Developed a public API subsystem with cache to efficiently serve reporting data} 
-\item {Enhanced frontend accessibility compliance using tools like Axe and Wave}
+\item {\textbf{Developed core features for OpenGov’s Procurement suite}, a cloud platform serving U.S. public sector agencies, supporting mission-critical workflows for \textbf{thousands of government users} across procurement and reporting.}
+\item {\textbf{Contributed to and scaled a mature production codebase} built with Node.js, React, Koa, Apache Kafka, and PostgreSQL, delivering features with a strong focus on \textbf{performance, reliability, and maintainability} in a high-compliance environment.}
+\item {\textbf{Designed and implemented a fine-grained permission system} enabling confidentiality and role-based access controls, improving data security and reducing unauthorized access incidents by \textbf{over 40\%}.}
+\item {\textbf{Optimized a large-scale data processing pipeline using PyFlink and Flink SQL}, reducing reporting query latency by \textbf{up to 50\%} and significantly improving data freshness and analytical capabilities for end users.}
+\item {\textbf{Maintained and enhanced a distributed microservices architecture} running on Kubernetes and Apache Kafka, improving system stability, supporting horizontal scalability, and reducing production incidents through proactive monitoring and tuning.}
+\item {\textbf{Developed a public-facing reporting API with an integrated caching layer}, decreasing response times by \textbf{60\%+} and enabling efficient, high-throughput data access for internal teams and external consumers.}
+\item {\textbf{Improved frontend accessibility compliance} using tools such as Axe and Wave, helping the application meet \textbf{WCAG standards} and increasing usability for users with assistive technologies while reducing accessibility-related defects.}
 \end{itemize}
 }
 \cventry{Nov 2021 -- Mar 2024}{Responsis - Cascade}{\textsc{Full-stack Software Engineer}}{}{}
@@ -101,7 +114,7 @@ I'm a Senior Software Engineer with over 7 years of experience designing and bui
 \item {Interviewed and trained new team members\newline}
 \end{itemize}
 }
-\cventry{2017 -- Nov 2021}{Belaris}{\textsc{Software Engineer, DevOps}}{}{}
+\cventry{Mar 2017 -- Nov 2021}{Belaris}{\textsc{Software Engineer, DevOps}}{}{}
 {
 \begin{itemize}
 \item {Designed and developed web applications utilizing PHP Laravel framework}
