@@ -50,7 +50,7 @@
 %-------------------------------------------------------------------------------
 % fonts
 \renewcommand*{\namefont}{\fontsize{34}{36}\mdseries\upshape}
-\renewcommand*{\titlefont}{\LARGE\mdseries\slshape}
+\renewcommand*{\titlefont}{\fontsize{20}{21}\mdseries\slshape}
 \renewcommand*{\addressfont}{\small\mdseries\slshape}
 \renewcommand*{\quotefont}{\large\slshape}
 \renewcommand*{\sectionfont}{\Large\mdseries\upshape}
@@ -59,7 +59,7 @@
 
 % styles
 \renewcommand*{\namestyle}[1]{{\namefont\textcolor{color0}{#1}}}
-\renewcommand*{\titlestyle}[1]{{\titlefont\textcolor{color2}{#1}}}
+\renewcommand*{\titlestyle}[1]{{\titlefont\textcolor{color1}{#1}}}
 \renewcommand*{\addressstyle}[1]{{\addressfont\textcolor{color1}{#1}}}
 \renewcommand*{\quotestyle}[1]{{\quotefont\textcolor{color1}{#1}}}
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\textcolor{color1}{#1}}}
@@ -106,7 +106,7 @@
   % optional detailed information box
   \newbox{\makecvtitledetailsbox}%
   \savebox{\makecvtitledetailsbox}{%
-    \addressfont\color{color2}%
+    \addressfont\color{color0}%
     \begin{tabular}[b]{@{}r@{}}%
       \ifthenelse{\isundefined{\@addressstreet}}{}{\makenewline\addresssymbol\@addressstreet%
         \ifthenelse{\equal{\@addresscity}{}}{}{\makenewline\@addresscity}}% if \addresstreet is defined, \addresscity will always be defined but could be empty
