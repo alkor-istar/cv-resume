@@ -25,23 +25,39 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[16pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\documentclass[11pt,legalpaper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
 \moderncvstyle{classicfr} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+ 
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{enumitem}
+\setlist[itemize]{
+  leftmargin=1.5em,
+  itemsep=0.0em,
+  topsep=0.2em
+}
+\usepackage[scale=0.9]{geometry} % Reduce document margins
+\setlength{\hintscolumnwidth}{2.5cm}
+\usepackage{accsupp}
+\newcommand{\ATSHint}[2]{%
+  \BeginAccSupp{method=pdfstringdef,ActualText={#1}}%
+  #2%
+  \EndAccSupp{}%
+}
 
-\usepackage[scale=0.95]{geometry} % Reduce document margins
+
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
 \firstname{Gabriel} 
-\familyname{Rodr\'{i}guez} % Your last name
+\familyname{Rodriguez} % Your last name
 
 % All information in this block is optional, comment out any lines you don't need
 \title{Senior Software Engineer}
@@ -57,118 +73,79 @@
 %----------------------------------------------------------------------------------------
 
 \begin{document}
- 
+
 \makecvtitle % Print the CV title 
 
-{Senior Software Engineer with \textbf{7+ years of experience} building
-\textbf{scalable web applications} and leading
-\textbf{cross-team technical initiatives} in fast-paced
-\textbf{SaaS} and \textbf{product-driven environments}.
-Strong background in backend and distributed systems, with hands-on expertise in
-\textbf{Node.js, React, Python}, and \textbf{AWS-based architectures}.
-Demonstrated ability to own complex systems end-to-end, drive
-architectural decisions, and guide teams through
-migrations, integrations, and platform evolution.
-Passionate about building \textbf{high-autonomy teams}, improving
-\textbf{engineering standards}, and scaling systems with a focus on
-\textbf{long-term impact and operational excellence}.}
+{Senior Software Engineer with \textbf{7+ years of experience} designing and delivering
+    \textbf{scalable, production-grade web platforms} and leading
+    \textbf{cross-team technical initiatives} in fast-paced
+    \textbf{SaaS} and \textbf{product-driven organizations}.
+    Strong background in backend and distributed systems, with hands-on expertise in
+    \textbf{Node.js, React, Python}, and \textbf{Cloud-based architectures}.
+    Proven ability to own complex systems end-to-end, drive
+    architectural decisions, and guide teams through
+    migrations, integrations, and platform evolution.
+    Focused on building \textbf{high-autonomy teams}, raising
+    \textbf{engineering standards}, and scaling systems with an emphasis on
+    \textbf{long-term maintainability and operational excellence}.}
+
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
 %\newpage
 \section{Skills}
 
-\cvitem{Frontend}{React | TypeScript | JavaScript | HTML/CSS | MaterialUI | Redux | Next.js}
-\cvitem{Backend}{NodeJS | Python | C/C++ | PHP | LangGraph |  GraphQL | JWT | OAuth | gRPC }
-\cvitem{Databases}{PostgreSQL | MySQL | MongoDB | Redis | DynamoDB | RDS | Opensearch}
-\cvitem{Cloud \& DevOps}{AWS | GCP | Lambda | S3 | Terraform | Docker | Kubernetes | Apache Kafka | Flink | Debezium | CI/CD | Linux}
-\cvitem{Architecures \& Patterns}{Microservices | Serverless | Event-Driven Design | Domain-Driven Design | Test-Driven Design }
+\cvitem{Frontend}{React | TypeScript | JavaScript | HTML/CSS | Material UI | Redux | Next.js | Axe | Wave}
+\cvitem{Backend}{Node.JS | Python | C/C++ | PHP | LangGraph |  GraphQL | JWT | OAuth | gRPC }
+\cvitem{Databases}{PostgreSQL | MySQL | MongoDB | Redis | DynamoDB | RDS | OpenSearch}
+\cvitem{Cloud \& DevOps}{AWS | GCP | Lambda | S3 | Terraform | Docker | Kubernetes | Apache Kafka | Apache Flink | Debezium | CI/CD | Linux}
+\cvitem{Architectures}{Microservices | Serverless | Event-Driven Design | Domain-Driven Design | Test-Driven Design }
 \cvitem{Languages}{Spanish (Native), English (C1)}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 \section{Professional Experience}
-\subsection{Software engineering}
-\cventry{Apr 2024 -- Present}{OpenGov}{\textsc{Senior Software Engineer}}{}{}
-{
+\large\cventry{2024--Present}{Senior Full-Stack Software Engineer}{\textsc{OpenGov}}{[Node.js - React - Kafka]}{}{}
+{Led development of \textbf{core features} for OpenGov’s Procurement suite, a cloud platform serving U.S. public sector
+    agencies, supporting mission-critical workflows for \textbf{400,000+ government users}.}
 \begin{itemize}
-\item {\textbf{Developed core features for OpenGov’s Procurement suite}, a cloud platform serving U.S. public sector agencies, supporting mission-critical workflows for \textbf{thousands of government users} across procurement and reporting.}
-\item {\textbf{Contributed to and scaled a mature production codebase} built with Node.js, React, Koa, Apache Kafka, and PostgreSQL, delivering features with a strong focus on \textbf{performance, reliability, and maintainability} in a high-compliance environment.}
-\item {\textbf{Designed and implemented a fine-grained permission system} enabling confidentiality and role-based access controls, improving data security and reducing unauthorized access incidents by \textbf{over 40\%}.}
-\item {\textbf{Optimized a large-scale data processing pipeline using PyFlink and Flink SQL}, reducing reporting query latency by \textbf{up to 50\%} and significantly improving data freshness and analytical capabilities for end users.}
-\item {\textbf{Maintained and enhanced a distributed microservices architecture} running on Kubernetes and Apache Kafka, improving system stability, supporting horizontal scalability, and reducing production incidents through proactive monitoring and tuning.}
-\item {\textbf{Developed a public-facing reporting API with an integrated caching layer}, decreasing response times by \textbf{60\%+} and enabling efficient, high-throughput data access for internal teams and external consumers.}
-\item {\textbf{Improved frontend accessibility compliance} using tools such as Axe and Wave, helping the application meet \textbf{WCAG standards} and increasing usability for users with assistive technologies while reducing accessibility-related defects.}
+    \item {Designed and implemented an \textbf{RBAC authorization system},
+          enabling sensitive workflows for departments such as HR and driving \textbf{broader enterprise adoption}
+          of the platform.}
+    \item {\textbf{Optimized a large-scale data processing pipeline using Flink}, reducing reporting query latencies \textbf{from
+              minutes to milliseconds} and improving data freshness
+          and analytical capabilities for end users.}
+    \item {\textbf{Improved frontend accessibility compliance} enabling the application to meet \textbf{WCAG standards} and achieving \textbf{100\%
+              compliance} across public-facing features, improving usability for users of assistive technologies.}
+    \item {\textbf{Interviewed, onboarded, and mentored engineers}, influencing hiring decisions,
+          accelerating team ramp-up, and reinforcing consistent engineering standards.}
+
 \end{itemize}
-}
-\cventry{Nov 2021 -- Mar 2024}{Responsis - Cascade}{\textsc{Full-stack Software Engineer}}{}{}
-{
+\vspace{0.5em}
+\cventry{2021 -- 2024}{Responsis - Cascade}{\textsc{Full-stack Software Engineer}}{[Typescript - Terraform - GraphQL]}{}{}
 \begin{itemize}
-\item {Contributed to rewriting Cascade from PHP to Node.js and migrating to a distributed AWS cloud architecture using Lambda, DynamoDB, and API Gateway.}
-\item {Designed the new code for the integrations feature that allowed an interface with Google, Microsoft, Atlassian and Salesforce APIs for data ingestion}
-\item {Developed a public api with AWS ApiGateway to facilitate webhooks and connections from third parties like Zapier and Power Automate. This includes the certification of connectors for seamless interoperability} 
-\item {All infrastructure was deployed using Terraform and CircleCI}
-\item {Enhanced frontend performance by optimizing GraphQL queries and implementing Apollo subscriptions, resulting in a tenfold improvement in platform speed and responsiveness}
-\item {Played a key role in designing and optimizing frontend features utilizing ReactJS}
-\item {Interviewed and trained new team members\newline}
+    \item {Contributed to the \textbf{rewrite of Cascade from a monolith to a microservices
+              architecture}, implementing \textbf{infrastructure as code} using Terraform, improving
+          scalability, reliability, and deployment velocity in production.}
+    \item {\textbf{Led the design of a distributed integration platform}, enabling secure and
+          scalable data ingestion from third-party services. This platform allowed our team to
+          deliver 5 major integrations in under 4 weeks.}
+    \item {\textbf{Built and owned a public API using AWS API Gateway} to support webhooks
+          and third-party integrations, including successful \textbf{connector certification} to
+          meet partner and customer requirements.}
+    \item {Drove major frontend performance improvements by optimizing
+          \textbf{WebSocket connections}, delivering a \textbf{x10 improvement} in
+          application responsiveness and real-time updates for end users.}
 \end{itemize}
-}
-\cventry{Mar 2017 -- Nov 2021}{Belaris}{\textsc{Software Engineer, DevOps}}{}{}
-{
+\vspace{0.5em}
+\cventry{2011 -- 2021}{Early Professional Journey}{\textsc{Software Engineer - Electronics - Freelance}}{}{}{}
 \begin{itemize}
-\item {Designed and developed web applications utilizing PHP Laravel framework}
-\item {Led the deployment of applications on Linux environments using Docker}
+    \item{\textbf{Belaris} Developed web applications and automation tools using PHP, Python, and Linux, including containerized deployments with Docker and backend services for bots and integrations.}
+    \item{\textbf{CNEA} Designed, implememented, and validated embedded and control systems (VHDL, C) for nuclear reactor protection and instrumentation systems.}
+    \item{\textbf{CITEDEF - CNEA} Hands-on experience across electronics, server administration, and applied research, including Linux server maintenance, hardware repair, and scientific instrumentation.}
+    \item{\textbf{UTN} Delivered C++ programming courses and CCNA networking instruction, covering core concepts in algorithms, memory, networking, and protocols.}
 \end{itemize}
-}
-\cventry{2020}{Freelance}{\textsc{Software Engineer}}{}{}
-{
-\begin{itemize}
-\item {Developed Telegram bot with Python backend for automatic longing and shorting cryptocurrencies based on indicators and a simple machine learning model.}
-\end{itemize}
-}
-
-\subsection{Electronic Engineering}
-
-\cventry{March 2011 -- Nov 2021} {\textsc{National Atomic Energy Commission (CNEA)}}{\textsc{Instrumentation and Control Engineer}}{}{}{
-\begin{itemize}
-\item {Design, manufacture and programming (VHDL) of modules for reactor protection systems of CAREM 25 and RA10 nuclear reactors}
-\item {Programming in C of votation and registration module for the Auxiliary Boron Injection System for Atucha II Nuclear Plant}
-\newline{}
-\end{itemize}
-}
-
-%------------------------------------------------
-
-
-
-
-\cventry{2009--2011}{\textsc{Institute for Scientific and Technical Research for Military Defense (CITEDEF)}}{PIDEF Scholarship}{}{}
-{
-\begin{itemize}
-\item {Computer controlled laser micromachining using solid state infrared laser}
-\item {Deployment and maintenance of servers based on Linux}
-\end{itemize}
-}
-
-%\cventry{2009--2010}{Parque Electr\'{o}nica}{\textsc{Electronic Technician}}{}{}{
-%\begin{itemize}
-%\item{Electromedicine devices repair}
-%\end{itemize}
-%}
-
-
-%------------------------------------------------
-
-\subsection{Teaching}
-
-\cventry{2007--2022}{C/C++ programming professor}{\textsc{National Technological University}}{}{}{}
-
-
-\cventry{2012--2013}{CCNA Instructor}{\textsc{National Technological University}}{\newline Haedo Regional Faculty }{}{}
-
-
-
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -176,6 +153,8 @@ Passionate about building \textbf{high-autonomy teams}, improving
 
 \section{Education}
 
+\cventry{2020}{Deep Learning Specialization}{DeepLearning.AI}{Coursera}{}{}
+\cventry{2012}{CCNA Certification}{Proydesa}{}{}{}
 \cventry{2005--2010}{Electronic Engineering}{National Technological University (UTN)}{Haedo Regional Faculty}{}{}  % Arguments not required can be left empty
 \cventry{1998--2004}{Electronic Technician}{Leonardo Murialdo Institute}{Villa Bosch}{}{}
 
