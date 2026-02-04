@@ -1,82 +1,61 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% "ModernCV" CV and Cover Letter
-% LaTeX Template
-% Version 1.1 (9/12/12)
+%-------------------------
+% Rover Resume - Base Template
+% Link: https://github.com/subidit/rover-resume
 %
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same 
-% directory as this .tex file. These files provide the resume style and themes 
-% used for structuring the document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Shows code for various formatting options for different resume sections.
+% Education and Projects have single-line headers; while Experience uses double-line.
+% Some formatting codes are kept inline; consider \newcommand{cmd}{def}.
+% Excludes hyperref and icons for readability; MVP version.
+% Explore other templates for more options.
+% Mix and match as desired. Be consistent with headers and sub-headers.
+%------------------------
 
-%!TEX root = ./cv-fgr.tex
+\documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\usepackage[margin=1.0cm, papersize={210mm, 330mm}]{geometry}
+\setcounter{secnumdepth}{0} % remove section numbering
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor} 
+\usepackage[bookmarks=false]{hyperref} % [imp!]
+\usepackage{ragged2e}
+\definecolor{cvtheme}{HTML}{1a5276} % A professional dark blue
+\hypersetup{ % https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
+    colorlinks=true,
+    urlcolor=cvtheme,
+    pdftitle={Gabriel Rodriguez Resume},
+}
 
-\documentclass[11pt,legalpaper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
-
-\moderncvstyle{classicfr} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
- 
-
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\titlespacing{\subsection}{0pt}{*0}{*0} % remove vertical spacing above and below
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\color{cvtheme}\large\bfseries\uppercase}{}{}{}[\titlerule]
+\titleformat*{\subsubsection}{\large\itshape}
 \usepackage{enumitem}
-\setlist[itemize]{
-  leftmargin=1.5em,
-  itemsep=0.0em,
-  topsep=0.2em
-}
-\usepackage[scale=0.9]{geometry} % Reduce document margins
-\setlength{\hintscolumnwidth}{2.5cm}
-\usepackage{accsupp}
-\newcommand{\ATSHint}[2]{%
-  \BeginAccSupp{method=pdfstringdef,ActualText={#1}}%
-  #2%
-  \EndAccSupp{}%
-}
+\setlist[itemize]{noitemsep,left=0pt .. \parindent}
+\pagestyle{empty} % remove page number
+\pdfgentounicode=1
 
 
-%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
-%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
-
-
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION SECTION
-%----------------------------------------------------------------------------------------
-
-\firstname{Gabriel} 
-\familyname{Rodriguez} % Your last name
-
-% All information in this block is optional, comment out any lines you don't need
-\title{Senior Software Engineer}
-\address{Remote Contractor \textbullet\ Argentina}{}
-\homepage{www.linkedin.com/in/gabriel-rodriguez-b47b0920b/}{Linkedin Profile}
-\mobile{(+54) 911-2409-6081}
-%\phone{(011) 4842-6857}
-%\fax{(000) 111 1113}
-\email{fgabriel.inbox@gmail.com}
-%\homepage{alkor-istar.github.io}{Github portfolio} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
-%\extrainfo{additional information}
-
-%----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\makecvtitle % Print the CV title 
+\begin{center}
+    \begin{minipage}{0.5\textwidth}
+        {\Huge\bfseries
+            \textcolor{cvtheme}{Gabriel Rodriguez} % Name Here
+        } \\ \medskip
+        {\Large\,Senior Software Engineer} % Title [optional]
+    \end{minipage} \hfill
+    \begin{minipage}{0.4\textwidth}
+        \raggedleft
+        Email: \href{fgabriel.inbox@gmail.com}{fgabriel.inbox@gmail.com} \\
+        Mobile: (+54) 911-2409-6081 \\
+        LinkedIn: \href{https://www.linkedin.com/in/rfgabriel}{linkedin.com/in/rfgabriel}\\
+        GitHub: \href{https://github.com/alkor-istar}{github.com/alkor-istar}
+    \end{minipage}
+\end{center}
 
-{Senior Software Engineer with \textbf{7+ years of experience} designing and delivering
+\begin{justify}
+    Senior Software Engineer with \textbf{7+ years of experience} designing and delivering
     \textbf{scalable, production-grade web platforms} and leading
     \textbf{cross-team technical initiatives} in fast-paced
     \textbf{SaaS} and \textbf{product-driven organizations}.
@@ -87,75 +66,55 @@
     migrations, integrations, and platform evolution.
     Focused on building \textbf{high-autonomy teams}, raising
     \textbf{engineering standards}, and scaling systems with an emphasis on
-    \textbf{long-term maintainability and operational excellence}.}
+    \textbf{long-term maintainability and operational excellence}.
+\end{justify}
 
-%----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS SECTION
-%----------------------------------------------------------------------------------------
-%\newpage
 \section{Skills}
+%===========================%
+\begin{description}[itemsep=0pt]
+    \item[{Frontend: }] {React, TypeScript, JavaScript, HTML/CSS, Material UI, Redux, Next.js, Axe, Wave}
+    \item[{Backend: }] {Node.JS, Python, C/C++, PHP, LangGraph,  GraphQL, JWT, OAuth, gRPC}
+    \item[{Databases: }] {PostgreSQL, MySQL, MongoDB, Redis, DynamoDB, RDS, OpenSearch}
+    \item[{Cloud \& DevOps: }] {AWS, GCP, Terraform, Docker, Kubernetes, Apache Kafka, Apache Flink, CI/CD, Linux}
+    \item[{Architectures: }] {Microservices, Serverless, Event-Driven Design, Domain-Driven Design, Test-Driven Design}
+    \item[{Languages: }] {Spanish (Native), English (C1)}
+\end{description}
 
-\cvitem{Frontend}{React | TypeScript | JavaScript | HTML/CSS | Material UI | Redux | Next.js | Axe | Wave}
-\cvitem{Backend}{Node.JS | Python | C/C++ | PHP | LangGraph |  GraphQL | JWT | OAuth | gRPC }
-\cvitem{Databases}{PostgreSQL | MySQL | MongoDB | Redis | DynamoDB | RDS | OpenSearch}
-\cvitem{Cloud \& DevOps}{AWS | GCP | Lambda | S3 | Terraform | Docker | Kubernetes | Apache Kafka | Apache Flink | Debezium | CI/CD | Linux}
-\cvitem{Architectures}{Microservices | Serverless | Event-Driven Design | Domain-Driven Design | Test-Driven Design }
-\cvitem{Languages}{Spanish (Native), English (C1)}
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
 \section{Professional Experience}
-\large\cventry{2024--Present}{Senior Full-Stack Software Engineer}{\textsc{OpenGov}}{[Node.js - React - Kafka]}{}{}
-{Led development of \textbf{core features} for OpenGov’s Procurement suite, a cloud platform serving U.S. public sector
-    agencies, supporting mission-critical workflows for \textbf{400,000+ government users}.}
+%=================%
+\subsection{OpenGov \hfill Remote}
+\subsubsection{Senior Full-Stack Software Engineer \hfill  Apr 2024 -- Present}
 \begin{itemize}
-    \item {Designed and implemented an \textbf{RBAC authorization system},
-          enabling sensitive workflows for departments such as HR and driving \textbf{broader enterprise adoption}
-          of the platform.}
-    \item {\textbf{Optimized a large-scale data processing pipeline using Flink}, reducing reporting query latencies \textbf{from
-              minutes to milliseconds} and improving data freshness
-          and analytical capabilities for end users.}
-    \item {\textbf{Improved frontend accessibility compliance} enabling the application to meet \textbf{WCAG standards} and achieving \textbf{100\%
-              compliance} across public-facing features, improving usability for users of assistive technologies.}
-    \item {\textbf{Interviewed, onboarded, and mentored engineers}, influencing hiring decisions,
-          accelerating team ramp-up, and reinforcing consistent engineering standards.}
-
-\end{itemize}
-\vspace{0.5em}
-\cventry{2021 -- 2024}{Full-stack Software Engineer}{\textsc{Responsis - Cascade}}{[Typescript - Terraform - GraphQL]}{}{}
-\begin{itemize}
-    \item {Contributed to the \textbf{rewrite of Cascade from a monolith to a microservices
-              architecture}, implementing \textbf{infrastructure as code} using Terraform, improving
-          scalability, reliability, and deployment velocity in production.}
-    \item {\textbf{Led the design of a distributed integration platform}, enabling secure and
-          scalable data ingestion from third-party services. This platform allowed our team to
-          deliver 5 major integrations in under 4 weeks.}
-    \item {\textbf{Built and owned a public API using AWS API Gateway} to support webhooks
-          and third-party integrations, including successful \textbf{connector certification} to
-          meet partner and customer requirements.}
-    \item {Drove major frontend performance improvements by optimizing
-          \textbf{WebSocket connections}, delivering a \textbf{x10 improvement} in
-          application responsiveness and real-time updates for end users.}
-\end{itemize}
-\vspace{0.5em}
-\cventry{2011 -- 2021}{Early Professional Journey}{\textsc{Software Engineer - Electronics - Freelance}}{}{}{}
-\begin{itemize}
-    \item{\textbf{Belaris} Developed web applications and automation tools using PHP, Python, and Linux, including containerized deployments with Docker and backend services for bots and integrations.}
-    \item{\textbf{CNEA} Designed, implememented, and validated embedded and control systems (VHDL, C) for nuclear reactor protection and instrumentation systems.}
-    \item{\textbf{CITEDEF - CNEA} Hands-on experience across electronics, server administration, and applied research, including Linux server maintenance, hardware repair, and scientific instrumentation.}
-    \item{\textbf{UTN} Delivered C++ programming courses and CCNA networking instruction, covering core concepts in algorithms, memory, networking, and protocols.}
+    \item {Designed and implemented an\textbf{ RBAC authorization system}, enabling sensitive workflows for departments such as HR and driving\textbf{ broader enterprise adoption}	of the platform.}
+    \item {\textbf{Optimized a large-scale data processing pipeline using Flink}, reducing reporting query latencies \textbf{from minutes to milliseconds} and improving data freshness and analytical capabilities for end users.}
+    \item {\textbf{Improved frontend accessibility compliance} to meet \textbf{WCAG standards} and achieve\textbf{ 100\% compliance} across public-facing features, improving usability for users of assistive technologies.}
+    \item {\textbf{Interviewed, onboarded, and mentored engineers}, influencing hiring decisions, accelerating team ramp-up, and reinforcing consistent engineering standards.}
 \end{itemize}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+\subsection{Responsis - Cascade \hfill Remote}
+\subsubsection{Full-Stack Software Engineer \hfill Mar 2021 -- Apr 2024}
+\begin{itemize}
+    \item {Contributed to the \textbf{rewrite of Cascade from a monolith to a microservices architecture}, implementing \textbf{infrastructure as code} using Terraform, improving scalability, reliability, and deployment velocity in production.}
+    \item {\textbf{Led the design of a distributed integration platform}, enabling secure and scalable data ingestion from third-party services. This platform allowed our team to deliver 5 major integrations in under 4 weeks.}
+    \item {\textbf{Built and owned a public API using AWS API Gateway} to support webhooks and third-party integrations, including successful \textbf{connector certification} to meet partner and customer requirements.}
+    \item {Drove major frontend performance improvements by optimizing\textbf{ WebSocket connections}, delivering a \textbf{x10 improvement} in application responsiveness and real-time updates for end users.}
+\end{itemize}
+
+\subsection{Previous Experience \hfill 2010 -- 2024}
+\begin{itemize}
+    \item{\textbf{Belaris:} Developed web applications and automation tools using PHP, Python, and Linux, including containerized deployments with Docker and backend services for bots and integrations.}
+    \item{\textbf{CNEA:} Designed, implemented, and validated embedded and control systems (VHDL, C) for nuclear reactor protection and instrumentation systems.}
+    \item{\textbf{CITEDEF:} Hands-on experience across electronics, server administration, and applied research, including Linux server maintenance, hardware repair, and scientific instrumentation.}
+    \item{\textbf{UTN:} Delivered C++ programming courses and CCNA networking instruction, covering core concepts in algorithms, memory, networking, and protocols.}
+\end{itemize}
 
 \section{Education}
-
-\cventry{2020}{Deep Learning Specialization}{DeepLearning.AI}{Coursera}{}{}
-\cventry{2012}{CCNA Certification}{Proydesa}{}{}{}
-\cventry{2005--2010}{Electronic Engineering}{National Technological University (UTN)}{Haedo Regional Faculty}{}{}  % Arguments not required can be left empty
-\cventry{1998--2004}{Electronic Technician}{Leonardo Murialdo Institute}{Villa Bosch}{}{}
+%=================%
+\begin{itemize}
+    \item{\textbf{Deep Learning Specialization}, DeepLearning.AI, Coursera \hfill 2020}
+    \item{\textbf{CCNA Certification}, Proydesa \hfill 2012}
+    \item{\textbf{Electronic Engineering}, National Technological University (UTN) \hfill 2005--2010}
+    \item{\textbf{Electronic Technician}, Leonardo Murialdo Institute \hfill 1998--2004}
+\end{itemize}
 
 \end{document}
